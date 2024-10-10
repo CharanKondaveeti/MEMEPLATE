@@ -5,7 +5,7 @@ import Homepage from './pages/Homepage'
 import MemeGallery from './pages/MemeGallery'
 import AppLayout from './AppLayout'
 import Anime from './features/anime/Anime'
-import UploadMemePlate from './pages/UploadMemeplate'
+import UploadMemePlate from './pages/UploadMemePlate'
 
 const router = createBrowserRouter([
   {
