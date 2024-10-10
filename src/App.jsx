@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import './App.css'
 import BulkUploadMemeTemplates from './pages/BulkUploadMemeTemplates'
 import Homepage from './pages/Homepage'
@@ -12,6 +12,10 @@ const router = createBrowserRouter([
     path: "/",
     element: <AppLayout />, 
     children: [
+      {
+        index: true, // This sets the default route for this path
+        element: <Navigate to="/homepage" />
+      },
       {
         path: "/pnb",
         element: <Anime />
