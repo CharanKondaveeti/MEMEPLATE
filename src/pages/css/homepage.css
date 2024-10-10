@@ -1,0 +1,126 @@
+
+.homepage {
+    font-family: "Poppins", sans-serif;
+    padding: 0rem 9.6rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .actor-section, .movie-section {
+    margin-bottom: 40px;
+  }
+  
+  .actor-carousel, .movie-carousel {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 0 3rem 0;
+
+    flex-wrap: nowrap;
+    gap: 2rem;
+
+  }
+
+  .actor-card , 
+  .movie-card {
+      width: 16rem;
+      flex-shrink: 0;
+  }
+
+  .actor-card,
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+
+  .actor-card > img , 
+  .movie-card > img{
+    flex-grow: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+  }
+
+  .actor-card > h3, 
+  .movie-card > h3{
+    color:#555;
+    font-size: 1.6rem;
+    font-weight: 500 !important;
+    text-transform: capitalize;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .actor-card > h3:hover, 
+  .movie-card > h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .actor-card:hover > img,
+  .movie-card:hover > img{
+    transform: scale(1.05);
+    transition: 0.2s all ease;
+  }
+
+  .actor-image, .meme-card img {
+    width: 100%;
+  }
+  
+
+  .h2--input{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .h2--input > h2{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+
+  .search-bar {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 14px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4x; 
+    font-size: 16px;
+    transition: 0.3s; 
+  }
+  
+  .search-bar:focus {
+    border: 2px solid #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add slight shadow on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Update headings and card text */
+  .actor-card h3, .movie-card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  
+  /* Add styles for card hover */
+  /* .actor-card:hover, .movie-card:hover {
+    transform: scale(1.05); 
+    transition: transform 0.2s ease-in-out; 
+  }
+   */
+
+   .actor-card, .movie-card{
+    border-radius: 4px;
+    overflow: hidden;
+   }

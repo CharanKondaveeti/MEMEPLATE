@@ -1,0 +1,136 @@
+.app-header > p {
+    font-size: 3rem;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -1px;
+    font-weight: 900;
+
+  /* background-image: linear-gradient(90deg,#04a89b,#00e1ff 23%,#00c8ff 34%,#8fa2ff 43%,#e273e1 52%,#ff4d8e 60%,#ff5c74 68%,#ff775c 75%,#ff9142 83%,#ffb22e 91%,#ffce1f); */
+
+  /* background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  letter-spacing: -1px;
+  font-family: Raleway,sans-serif !important; */
+}
+
+.app-header > input{
+    font-size: 1.4rem;
+    padding: 1rem 1.2rem;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    color: white;
+
+    padding: 1rem 3.6rem;
+  }
+  
+  .search-filters {
+    display: flex;
+    align-items: center;
+  }
+  
+  .actor-inputs {
+    display: flex;
+    gap: 10px; 
+  }
+  
+  .actor-input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .actor-input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1; /* Take up available space */
+  }
+  
+  .add-actor {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .add-actor:hover {
+    background-color: #45a049;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* Blue */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  input[type="text"] {
+    width: 200px; /* Fixed width for text inputs */
+  }
+
+  
+  .app-header {
+    padding: 1.4rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    background-color: rgb(214, 19, 71);
+  }
+  
+  .search-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .people-input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .search-button,
+  .toggle-button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+  }
+  
+  .toggle-button {
+    background-color: #6c757d;
+  }
+  
+  .add-person {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 5px;
+    cursor: pointer;
+  }
+  

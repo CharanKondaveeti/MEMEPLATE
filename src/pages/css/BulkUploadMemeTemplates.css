@@ -1,0 +1,57 @@
+.bulk-upload {
+    padding: 20px;
+  }
+  
+  .image-preview {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .image-item {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .preview-image {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  input {
+    display: block;
+    margin-top: 5px;
+  }
+  .actor-input {
+    margin-top: 10px;
+  }
+  
+  .people-list {
+    margin-top: 10px;
+  }
+  
+  .actor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .actor-item button {
+    margin-left: 10px;
+  }
+    
+  .remove-image-button {
+    /* background-color: transparent; */
+    border: none;
+    /* color: red; */
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute; /* Adjust position as needed */
+    top: 5px;
+    right: 5px;
+
+    width: auto !important;
+    background-color : transparent !important;
+    color: black !important;
+  }
+
+  

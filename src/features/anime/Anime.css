@@ -1,0 +1,153 @@
+/* Parent Container */
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Image Animations */
+.loading-container {
+  position: relative;
+}
+
+.parent > .child > div {
+  position: absolute;
+  width: auto;
+  height: 15rem;
+  transform-origin: top right;
+  display: flex;
+  align-items: flex-end;
+}
+
+.child {
+  display: flex;
+  align-items: center;
+}
+
+.parent > .child > div > img {
+  width: auto;
+  height: 5rem;
+  animation: rotateImgs 1.5s linear forwards;
+}
+
+/* Rotations for Each Image */
+.parent > .child > div:nth-child(1) {
+  transform: rotate(120deg);
+  animation: rotateImgs1 1.5s linear forwards, reduceHeight 1.5s linear forwards, settle1 0.5s linear forwards 2s;
+}
+
+.parent > .child > div:nth-child(2) {
+  transform: rotate(240deg);
+  animation: rotateImgs2 1.5s linear forwards, reduceHeight 1.5s linear forwards, settle2 0.5s linear forwards 2s;
+}
+
+.parent > .child > div:nth-child(3) {
+  transform: rotate(360deg);
+  animation: rotateImgs3 1.5s linear forwards, reduceHeight 1.5s linear forwards, settle3 0.5s linear forwards 2s;
+}
+
+/* Text Reveal Container */
+.text-reveal-container {
+  width: 0; /* Start with zero width */
+  overflow: hidden; /* Mask the text for reveal */
+  white-space: nowrap; /* Keep text in a single line */
+  animation: expandWidth 1s ease forwards 1.5s, moveright  1s ease forwards 1.3s; /* Expand width with a 3s delay */
+}
+
+/* Text Styles */
+.hidden-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards 1.5s; /* Fade in text after container expands */
+}
+
+/* Animation to expand the container width */
+@keyframes moveright {
+  0% {
+    transform: translateY(-15px) translateX(-10rem);
+  }
+  100% {
+    transform:  translateY(-15px) translateX(8rem);
+  }
+}
+/* Animation to expand the container width */
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 15rem; /* Set a fixed width to fit the text content */
+  }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframes for Rotations */
+@keyframes rotateImgs1 {
+  0% {
+    transform: rotate(120deg);
+  }
+  50% {
+    transform: rotate(300deg);
+  }
+  100% {
+    transform: rotate(480deg);
+  }
+}
+
+@keyframes rotateImgs2 {
+  0% {
+    transform: rotate(240deg);
+  }
+  50% {
+    transform: rotate(420deg);
+  }
+  100% {
+    transform: rotate(600deg);
+  }
+}
+
+@keyframes rotateImgs3 {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(540deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+/* Height Animation */
+@keyframes reduceHeight {
+  0% {
+    height: 15rem;
+  }
+  100% {
+    height: 3rem;
+  }
+}
+
+@keyframes rotateImgs {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    height: 5rem;
+  }
+  100% {
+    transform: translateY(-10px) rotate(404deg);
+    height: 3rem;
+  }
+}
