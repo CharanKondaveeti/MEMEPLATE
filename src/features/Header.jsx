@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './css/Header.css'; // Import your CSS file
+import './css/header.css';
 
 const Header = ({ onSearch }) => {
   // State for inputs: peopleInMeme, emotion, and movieName
