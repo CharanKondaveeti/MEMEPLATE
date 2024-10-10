@@ -62,7 +62,7 @@ const BulkUploadMemeTemplates = () => {
     formData.append('templates', JSON.stringify(templates));
   
     try {
-      const response = await axios.post('http://localhost:5050/api/templates/bulkUpload', formData);
+      const response = await axios.post('https://memeplate-be-1.onrender.com/api/templates/bulkUpload', formData);
       console.log('Upload successful:', response.data);
       alert('All templates uploaded successfully!');
     } catch (error) {

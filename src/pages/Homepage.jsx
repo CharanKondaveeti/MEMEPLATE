@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './css/homepage.css';
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
+const backendUrl = 'https://memeplate-be-1.onrender.com/';
+// console.log(process.env)
 
 
 const Homepage = () => {
@@ -17,7 +18,7 @@ const Homepage = () => {
   useEffect(() => {
     const fetchMemes = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/templates/getAlltemplates`);
+        const response = await axios.get(`${backendUrl}api/templates/getAlltemplates`);
         // const response = await axios.get(`http://localhost:5050/api/templates/getAlltemplates`);
         const fetchedMemes = response.data.data || [];
 
