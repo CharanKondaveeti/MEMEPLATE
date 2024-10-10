@@ -2,7 +2,6 @@ import  { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './css/homepage.css';
-import Header from "./../features/Header"
 
 const Homepage = () => {
   const [memes, setMemes] = useState([]);
