@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     element: <AppLayout />, 
     children: [
       {
-        index: true, // This sets the default route for this path
+        index: true,
         element: <Navigate to="/homepage" />
       },
       {

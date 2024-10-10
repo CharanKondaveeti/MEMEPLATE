@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './css/homepage.css';
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+
 const Homepage = () => {
   const [memes, setMemes] = useState([]);
   const [actorCategories, setActorCategories] = useState({});
@@ -14,7 +17,8 @@ const Homepage = () => {
   useEffect(() => {
     const fetchMemes = async () => {
       try {
-        const response = await axios.get('http://localhost:5050/api/templates/getAlltemplates');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/templates/getAlltemplates`);
+        // const response = await axios.get(`http://localhost:5050/api/templates/getAlltemplates`);
         const fetchedMemes = response.data.data || [];
 
         const categorizedByActors = fetchedMemes.reduce((categories, meme) => {

@@ -11,7 +11,6 @@ const BulkUploadMemeTemplates = () => {
     setFiles(selectedFiles);
     setMemeData(selectedFiles.map(() => ({
       description: '',
-      emotion: '',
       movieName: '',
       actors: [],
     })));
@@ -55,7 +54,6 @@ const BulkUploadMemeTemplates = () => {
     // Create a structured array of templates
     const templates = memeData.map(data => ({
       description: data.description,
-      emotion: data.emotion,
       movieName: data.movieName,
       actors: data.actors.join(', '),
     }));
@@ -97,12 +95,12 @@ const BulkUploadMemeTemplates = () => {
                 value={memeData[index]?.description}
                 onChange={(e) => handleInputChange(index, 'description', e.target.value)}
               />
-              <input
+              {/* <input
                 type="text"
                 placeholder="Emotion"
                 value={memeData[index]?.emotion}
                 onChange={(e) => handleInputChange(index, 'emotion', e.target.value)}
-              />
+              /> */}
               <input
                 type="text"
                 placeholder="Movie Name"

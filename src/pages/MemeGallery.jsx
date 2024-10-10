@@ -7,6 +7,9 @@ import './css/memegallery.css'; // Custom CSS for styling
 import Homepage from './Homepage';
 import { LiaGreaterThanSolid } from "react-icons/lia";
 
+const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+
 const MemeGallery = () => {
   const [filteredMemes, setFilteredMemes] = useState([]);
   const [allMemes, setAllMemes] = useState([]);
@@ -25,7 +28,7 @@ const MemeGallery = () => {
 
     const fetchMemes = async () => {
       try {
-        const response = await axios.get('http://localhost:5050/api/templates/getAlltemplates');
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}api/templates/getAlltemplates`);
         const fetchedMemes = response.data.data || [];
         setAllMemes(fetchedMemes);
 
